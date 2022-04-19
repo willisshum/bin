@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+let fs= require('fs');
+
+let obj = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+
+obj["scripts"]["start"] = "ts-node-dev server.ts";
+
+obj["scripts"]["test"] = "tsc --watch";
+
+fs.writeFileSync('package.json', JSON.stringify(obj, null, 2));

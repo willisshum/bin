@@ -1,11 +1,7 @@
 set -e
 npm init --yes
-npm install -D ts-node typescript @types/node
-npm install express
-npm install -D @types/express
-npm install listening-on
-npm install -D ts-node-dev
-npm install express-session
-npm install -D @types/express-session
+npm install -D ts-node typescript @types/node ts-node-dev @types/express @types/express-session @types/asciichart
+npm install express listening-on express-session asciichart
 cp /d/tecky_map/tecky-exercises/typescript_project_template/tsconfig.json .
 cp /d/tecky_map/tecky-exercises/typescript_project_template/.gitignore .
+update-package-json
