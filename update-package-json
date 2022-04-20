@@ -2,7 +2,7 @@
 
 let fs= require('fs');
 
-let obj = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+let obj = JSON.parse(fs.readFileSync('package.json', 'utf8').toString());
 
 obj["scripts"]["start"] = "ts-node-dev server.ts";
 
